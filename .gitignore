@@ -5,3 +5,10 @@ models
 *.swp
 *.p
 traffic-signs-data.zip
+
+
+#persistance items
+checkpoint
+lenet.data-*
+lenet.index
+lenet.meta
