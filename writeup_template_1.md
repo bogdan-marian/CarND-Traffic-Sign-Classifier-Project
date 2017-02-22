@@ -18,6 +18,7 @@ The goals / steps of this project are the following:
 
 
 [//]: # (Image References)
+[visual_inspection]: ./bogdan_images/visual_inspection.png "Visual inspection"
 
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
@@ -36,43 +37,36 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/bogdan-marian/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
 ####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-The code for this step is contained in the second code cell of the IPython notebook.  
+The code for this step is contained in "code cell number 1". I load basic information from the data using simple python tools. The data collected is:
+* Number of training examples = 34799
+* Number of testing examples = 12630
+* Image data shape = (32, 32, 3)
+* Number of classes = 43
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
-
-* The size of training set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
 
 ####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
-The code for this step is contained in the third code cell of the IPython notebook.  
+The code for this step is contained in two cells:
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+**code cell nubmer 2:** In this cell i load a random trafic sign
 
-![alt text][image1]
+**code cell number 3:** In hear i buld a bar char that shows the trafic sign names and their respective count numbers. Hear it is the plot that is build in this cell
+
+![alt text][visual_inspection]
+
 
 ###Design and Test a Model Architecture
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
-The code for this step is contained in the fourth code cell of the IPython notebook.
+The code for this step is contained in **code cell number 4**. The only thing that I'm doing in this step is shuffle the data. Shuffling the data is good practice so when training you have better chances of avoiding for each training session to get cut up on the same local minima.
 
-As a first step, I decided to convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image2]
-
-As a last step, I normalized the image data because ...
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
