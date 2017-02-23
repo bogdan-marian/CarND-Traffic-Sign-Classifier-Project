@@ -168,22 +168,20 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 
-**code cell number 20** is where I'm pullin the top 5 values with the aid of tf.nn.top_k. The top five tf.nn.top_k values were
+**code cell number 20** is where I'm pullin the top 5 soft max probabuilities with the aid of tf.nn.top_k. The top five tf.nn.top_k values were
 
-| top_k value         	|     Prediction	        		| 
+| top probability         	|     Prediction	        		| 
 |:---------------------:|:---------------------------------------------:| 
-| 131.29084778         		| ahead_only   				| 
-| 10.17061424     		| speed_limit 				|
-| 195.96173096			|no_passing 				|
-| 304.00003052	      		| yeld					|
-| 47.67661285			| stop      				|
+| 1.0         		| ahead_only   				| 
+| 0.449     		| speed_limit 				|
+| 1.0			| no_passing 				|
+| 1.0	      		| yeld					|
+| 1.0			| stop      				|
 
 
-Looking at the values in the above table I can clearly see that the network is pretty sure when prediction the following sins: Ahead only, No passing, Yeld
-For the "Stop" sign the network confidence is less then the first 3 mentioned sign but still the top value of 47.67 is quite high. 
-For the "Speed limit 60" sign the top value is only 10.17. Still the network predicted also in this case the correct sign. 
+Looking at the values in the above table I quite impressed that it is 100% sure on 4 cases. I tend to believe that I over trained but these are images downloaded by me from the internet. 
 
-I found it quite interesting that for the sign for witch I believed that it will have problems (the yeld sign) the network was actually on the highest convinced use case.
+I found it quite interesting that for the sign for witch I believed that it will have problems (the yeld sign) the network was actually 100% sure of its response.
 
 Kind regards
 Oloeriu Bogdan Marian 
